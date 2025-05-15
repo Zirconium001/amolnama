@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>May 2025 Calendar</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7faff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    a {
+  color: inherit;        /* Use parent element's text color     */
+  text-decoration: none; /* Remove underline */
+  font-weight: normal;   /* Optional: makes sure it's not bold */
+}
+
+    a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #5c6ac4;
+} 
+
+    .calendar {
+      text-align: center;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .calendar h1 {
+      color: #5c6ac4;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 25px;
+      text-align: center;
+      border-radius: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    thead th {
+      color: #5c6ac4;
+      font-weight: 600;
+    }
+
+    td {
+      background: #f0f4ff;
+      cursor: pointer;
+    }
+
+    td:hover {
+      background: #dbe3ff;
+      transform: scale(1.05);
+    }
+
+    .today {
+      background-color: #ffcccb !important;
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 0 0px #ffaaaa;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calendar">
+  <h1>May 2025</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td></td><td></td><td></td><td><a href="index.html">1</td><td><a href="index.html">2</td><td><a href="index.html">3</td></tr>
+      <tr><td><a href="index.html">4</td><td><a href="index.html">5</td><td><a href="index.html">6</td><td><a href="index.html">7</td><td><a href="index.html">8</td><td><a href="index.html">9</td><td><a href="index.html">10</td></tr>
+      <tr><td><a href="index.html">11</td><td><a href="index.html">12</td><td><a href="index.html">13</td><td><a href="index.html">14</td><td><a href="index.html">15</td><td><a href="index.html">16</td><td><a href="index.html">17</td></tr>
+      <tr><td><a href="index.html">18</td><td><a href="index.html">19</td><td><a href="index.html">20</td><td><a href="index.html">21</td><td><a href="index.html">22</td><td><a href="index.html">23</td><td><a href="index.html">24</td></tr>
+      <tr><td><a href="index.html">25</td><td><a href="index.html">26</td><td><a href="index.html">27</td><td><a href="index.html">28</td><td><a href="index.html">29</td><td><a href="index.html">30</td><td><a href="index.html">31</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  // Highlight today's date only if the current month is May
+  document.addEventListener("DOMContentLoaded", () => {
+    const today = new Date();
+    const thisMonth = today.getMonth(); // May = 4 (zero-indexed)
+    const thisDate = today.getDate();
+
+    if (thisMonth === 4) {
+      const cells = document.querySelectorAll("td");
+      cells.forEach(cell => {
+        if (cell.textContent.trim() === thisDate.toString()) {
+          cell.classList.add("today");
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
