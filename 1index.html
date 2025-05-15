@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,16 +43,16 @@
       gap: 30px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .section {
       background: white;
-      border-radius: 15px;
+      border-radius: 25px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      padding: 35px;
       width: 300px;
-      max-width: 90%;
+      max-width: 100%;
     }
 
     h2 {
@@ -68,7 +69,7 @@
     }
 
     button {
-      padding: 10px 15px;
+      padding: 40px 100px;
       border: none;
       border-radius: 8px;
       background: linear-gradient(145deg, #ff4e50, #f9d423);
@@ -82,8 +83,20 @@
       filter: brightness(1.1);
       box-shadow: 0 4px 10px rgba(255, 78, 80, 0.4);
     }
+  
+    a {
+  text-decoration: none;   /* removes underline */
+  color: #ffffff;          /* set your custom color */
+  font-weight: bold;       /* optional */
+  transition: color 0.3s ease;
+}
 
-    ul {
+a:hover {
+  color: #a6c1ee;          /* color on hover */
+  text-decoration: underline; /* optional, or remove it */
+}
+
+        ul {
       list-style: none;
       padding: 0;
     }
@@ -103,16 +116,14 @@
     <!-- Today's Deeds -->
     <div class="section">
       <h2>Today's Deeds</h2>
-      <input type="text" id="deedInput" placeholder="What did you do today?">
-      <button onclick="addDeed()">Add</button>
+      <button onclick="addDeed()"><a href="diary.html"><h3>What you did today</h3></a></button>
       <ul id="deedsList"></ul>
     </div>
 
     <!-- Future Events -->
     <div class="section">
       <h2>Future Events</h2>
-      <input type="text" id="eventInput" placeholder="Plan something...">
-      <button onclick="addEvent()">Add</button>
+      <button onclick="addEvent()"><a href="events.html"><h3>Plan something</h3></a></button>
       <ul id="eventsList"></ul>
     </div>
   </div>
